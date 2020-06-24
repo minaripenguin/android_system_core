@@ -1052,6 +1052,7 @@ on zygote-start && property:ro.crypto.state=unencrypted
     wait_for_prop odsign.verification.done 1
     # A/B update verifier that marks a successful boot.
     exec_start update_verifier_nonencrypted
+    start statsd
     start netd
     start zygote
     start zygote_secondary
@@ -1060,6 +1061,7 @@ on zygote-start && property:ro.crypto.state=unsupported
     wait_for_prop odsign.verification.done 1
     # A/B update verifier that marks a successful boot.
     exec_start update_verifier_nonencrypted
+    start statsd
     start netd
     start zygote
     start zygote_secondary
@@ -1068,6 +1070,7 @@ on zygote-start && property:ro.crypto.state=encrypted && property:ro.crypto.type
     wait_for_prop odsign.verification.done 1
     # A/B update verifier that marks a successful boot.
     exec_start update_verifier_nonencrypted
+    start statsd
     start netd
     start zygote
     start zygote_secondary
