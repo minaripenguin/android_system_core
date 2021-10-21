@@ -130,6 +130,7 @@ libinit_cc_defaults {
         "-DSHUTDOWN_ZERO_TIMEOUT=0",
         "-DINIT_FULL_SOURCES",
         "-DINSTALL_DEBUG_POLICY_TO_SYSTEM_EXT=0",
+        "-DSPOOF_SAFETYNET=1",
     ],
     product_variables: {
         debuggable: {
@@ -152,6 +153,8 @@ libinit_cc_defaults {
             cppflags: [
                 "-USHUTDOWN_ZERO_TIMEOUT",
                 "-DSHUTDOWN_ZERO_TIMEOUT=1",
+                "-USPOOF_SAFETYNET",
+                "-DSPOOF_SAFETYNET=0",
             ],
         },
         uml: {
@@ -388,6 +391,7 @@ cc_binary {
         "-DSHUTDOWN_ZERO_TIMEOUT=0",
         "-DLOG_UEVENTS=0",
         "-DSEPOLICY_VERSION=30", // TODO(jiyong): externalize the version number
+        "-DSPOOF_SAFETYNET=1",
     ],
 
     product_variables: {
@@ -417,6 +421,8 @@ cc_binary {
             cflags: [
                 "-USHUTDOWN_ZERO_TIMEOUT",
                 "-DSHUTDOWN_ZERO_TIMEOUT=1",
+                "-USPOOF_SAFETYNET",
+                "-DSPOOF_SAFETYNET=0",
             ],
         },
     },
