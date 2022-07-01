@@ -28,10 +28,9 @@ class Tombstone;
 
 class ScudoCrashData {
  public:
-  ScudoCrashData() = default;
+  ScudoCrashData() = delete;
   ~ScudoCrashData() = default;
-
-  bool SetErrorInfo(unwindstack::Memory* process_memory, const ProcessInfo& process_info);
+  ScudoCrashData(unwindstack::Memory* process_memory, const ProcessInfo& process_info);
 
   bool CrashIsMine() const;
 
