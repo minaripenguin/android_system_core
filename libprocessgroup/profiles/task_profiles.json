@@ -689,7 +689,7 @@
           "Name": "SetTimerSlack",
           "Params":
           {
-            "Slack": "40000000"
+            "Slack": "10000000"
           }
         }
       ]
