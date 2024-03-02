@@ -400,6 +400,11 @@ on init
     copy /dev/cpuset/mems /dev/cpuset/audio-app/mems
     write /dev/cpuset/audio-app/cpus 1-2
 
+    mkdir /dev/cpuset/display
+    copy /dev/cpuset/cpus /dev/cpuset/display/cpus
+    copy /dev/cpuset/mems /dev/cpuset/display/mems
+    write /dev/cpuset/display/cpus 4-7
+
     # change permissions for all cpusets we'll touch at runtime
     chown system system /dev/cpuset
     chown system system /dev/cpuset/foreground
@@ -424,6 +429,9 @@ on init
     chown system system /dev/cpuset/top-app/cgroup.procs
     chown system system /dev/cpuset/restricted/cgroup.procs
     chown system system /dev/cpuset/camera-daemon/cgroup.procs
+
+    chown system system /dev/cpuset/display
+    chown system system /dev/cpuset/display/tasks
 
     # set system-background to 0775 so SurfaceFlinger can touch it
     chmod 0775 /dev/cpuset/system-background

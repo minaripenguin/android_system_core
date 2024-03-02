@@ -469,6 +469,19 @@
       ]
     },
     {
+      "Name": "DisplayCapacity",
+      "Actions" : [
+        {
+          "Name" : "JoinCgroup",
+          "Params" :
+          {
+            "Controller": "cpuset",
+            "Path": "display"
+          }
+        }
+      ]
+    },
+    {
       "Name": "AudioAppCapacity",
       "Actions" : [
         {
