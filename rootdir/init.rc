@@ -436,6 +436,7 @@ on init
     chmod 0664 /dev/cpuset/restricted/tasks
     chmod 0664 /dev/cpuset/tasks
     chmod 0664 /dev/cpuset/camera-daemon/tasks
+    chmod 0664 /dev/cpuset/audio-app/cgroup.procs
     chmod 0664 /dev/cpuset/foreground/cgroup.procs
     chmod 0664 /dev/cpuset/background/cgroup.procs
     chmod 0664 /dev/cpuset/system-background/cgroup.procs

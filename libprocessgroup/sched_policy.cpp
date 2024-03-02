@@ -51,7 +51,7 @@ int set_cpuset_policy(pid_t tid, SchedPolicy policy) {
             return SetTaskProfiles(tid, {"CPUSET_SP_FOREGROUND", "BlkIOForeground"}, true) ? 0 : -1;
         case SP_AUDIO_APP:
         case SP_AUDIO_SYS:
-            return SetTaskProfiles(tid, {"CPUSET_SP_FOREGROUND", "AudioAppCapacity", "BlkIOForeground"}, true) ? 0 : -1;
+            return SetTaskProfiles(tid, {"CPUSET_SP_AUDIO", "AudioAppCapacity", "BlkIOForeground"}, true) ? 0 : -1;
         case SP_TOP_APP:
             return SetTaskProfiles(tid, {"CPUSET_SP_TOP_APP", "BlkIOBackground"}, true) ? 0 : -1;
         case SP_SYSTEM:
